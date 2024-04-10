@@ -1,19 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film Manager</title>
-</head>
-<body>
-    {% for film in films %}
-    {{ film.category_name }}<br>
-    {{ film.film_name }}<br>
-    {{ film.director }}<br>
-    {{ film.cast }}<br>
-    {{ film.country }}<br>
-    {{ film.release_year }}<br>
-    {{ film.duration }}<br>
-    {% endfor %}
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+
+ {% for film in films %}
+     {{ film.category_name }}<br>
+     {{ film.film_name }}<br>
+     {{ film.director }}<br>
+     {{ film.cast }}<br>
+     {{ film.country }}<br>
+     {{ film.release_year }}<br>
+     {{ film.duration }}<br>
+ {% endfor %}
+
+
+{% endblock %}
