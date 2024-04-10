@@ -1,17 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <ul class="collapsible">
+<h3 class="light-blue-text text-darken-4 center-align">All Shows</h3>    
+<ul class="collapsible">
         {% for film in films %}
         <li>
             <div class="collapsible-header white-text light-blue darken-4 text-shadow">
                 <i class="fas fa-caret-down"></i>
                 <strong>{{ film.name }}</strong> : {{ film.release_year }}
+                <p>{{ film.director }}</p>
+
                         
             </div>
             <div class="collapsible-body">
                 <strong>{{ film.category_name }}</strong>
-                <p>{{ film.descrption }}</p>
+                <p>{{ film.description }}</p>
+                <p><em>by: {{ film.created_by }}</em></p>>
             </div>
         </li>
         {% endfor %}
