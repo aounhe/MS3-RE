@@ -1,32 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for film in films %}
-{{ film.category_name }}<br>
-{{ film.film_name }}<br>
-{{ film.director }}<br>
-{{ film.cast }}<br>
-{{ film.country }}<br>
-{{ film.release_year }}<br>
-{{ film.duration }}<br>
-{% endfor %}
-
-<ul class="collapsible">
-    <li>
-        <div class="collapsible-header white-text light-blue darken-4 text-shadow"><i
-                class="fas fa-caret-down"></i>First</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-        <div class="collapsible-header white-text light-blue darken-4 text-shadow"><i
-                class="fas fa-caret-down"></i>Second</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-        <div class="collapsible-header white-text light-blue darken-4 text-shadow"><i
-                class="fas fa-caret-down"></i>Third</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-</ul>
+    <ul class="collapsible">
+        {% for film in films %}
+        <li>
+            <div class="collapsible-header white-text light-blue darken-4 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ film.film_name }}</strong> : {{ film.release_year }}
+                        
+            </div>
+            <div class="collapsible-body">
+                <strong>{{ film.category_name }}</strong>
+                <p>{{ film.descrption }}</p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 
 {% endblock %}
