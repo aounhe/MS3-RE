@@ -140,6 +140,13 @@ def edit_film(film_id):
     return render_template("edit_film.html", film=film, categories=categories)
 
 
+@app.route("/delete_film/<film_id>")
+def delete_film(film_id):
+    mongo.db.films.delete_one({"_id": ObjectId(film_id)})
+    flash("Show Successfully Deleted")
+    return redirect(url_for("get_films"))
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
