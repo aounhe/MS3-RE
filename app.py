@@ -120,9 +120,25 @@ def add_movie_tvshow():
 
 @app.route("/edit_film/<film_id>", methods=["GET", "POST"])
 def edit_film(film_id):
+    if request.method == "POST":
+        submit = {
+            "category_name": request.form.get("category_name"),
+            "name": request.form.get("name"),
+            "director": request.form.get("director"),
+            "cast": request.form.get("cast"),
+            "country": request.form.get("country"),
+            "duration": request.form.get("duration"),
+            "description": request.form.get("description"),
+            "release_year": request.form.get("release_year"),
+            "created_by": session["user"]
+        }
+        mongo.db.films.update_one({"_id": ObjectId(film_id)}, {'$set': submit})
+        flash("Show Successfully Updated")
+
     film = mongo.db.films.find_one({"_id": ObjectId(film_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_film.html", film=film, categories=categories)
+
 
 
 if __name__ == "__main__":
