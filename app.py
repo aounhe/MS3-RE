@@ -118,6 +118,13 @@ def add_movie_tvshow():
     return render_template("add_movie_tvshow.html", categories=categories)
 
 
+@app.route("/edit_film/<film_id>", methods=["GET", "POST"])
+def edit_film(film_id):
+    film = mongo.db.films.find_one({"_id": ObjectId(film_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_film.html", film=film, categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
