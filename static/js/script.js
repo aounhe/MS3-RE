@@ -7,7 +7,9 @@ $(document).ready(function () {
     $(".collapsible").collapsible();
     $('select').formSelect();
     $(".datepicker").datepicker({
-        format: "dd mmmm, yyyy",
+        format: "yyyy",
+        min: new Date(2005,3,20),
+        max: new Date(2025,7,14),
         showClearBtn: true,
         i18n: {
             done: "Select"
