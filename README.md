@@ -1,18 +1,75 @@
-# Welcome to What To Watch
+# Welcome to Show Library
 
 ## Backend Development Milestone3 Project by Houssem Aoun
 
-Build a show library website.
+A show library or archive is a specialized website in preserving cinematic heritage. These archives tirelessly collect, restore, and maintain various types of films, including:
 
-<img src= filmmanager/static/images/responsive.png>
+Feature Films: These are the full-length movies we enjoy in theaters or at home.
+Documentaries: Films that provide factual information or explore real-life events.
+Short Films: Compact cinematic works that convey powerful messages in a limited duration.
+Experimental Works: Creative and unconventional films that push the boundaries of storytelling.
 
-### External User Goals
+<img src= static/images/responsive-ms3.jpg>
 
-- Add favorite shows to the website.
+### User Experience (UX) ###
 
-### Site Owner's Goals
+* As a customer, I want to be able to search for shows by category or keyword, so I can easily find the show I am interested in.
 
-- Get popularity by letting users to write thier own reviews.
+* As a customer, I want to be able to add shows to the databse, view the contents of other users.
+
+* As a customer, I want to be able to create an account.
+
+* As a store owner, I want to be able to manage my show inventory, update film details.
+
+* As an Admin user the navigation bar is displayed with a logo on all pages for easy navigation, with a burger menu on mobile devices.
+
+* As an Admin user I can add, delete and edit categories and films.
+
+ ### User Stories
+  - #### VIEWING & NAVIGATION
+      | User Story Id 	| As a    	| I want to be able to...         	| So that I can...                                                                     	|
+      |---------------	|---------	|---------------------------------	|--------------------------------------------------------------------------------------	|
+      | 1             	| Shopper 	| Easily navigate the site        	| Find shows and information that I require                                         	|
+      | 2             	| Shopper 	| View shows by category       	    | Find specific show I am interested in without having to scroll through all shows 	    |
+      | 3             	| Shopper 	| View details of each show     	| Learn more about each show                                                        	|
+     
+
+    - #### REGISTRATION & USER ACCOUNTS
+        | User Story ID 	| As a    	| I want to be able to ...                    	| So that I can...                                        	|
+        |---------------	|---------	|---------------------------------------------	|---------------------------------------------------------	|
+        | 1             	| Shopper 	| Register an account                         	| Have an account with the site and view my profile       	|
+        | 2             	| Shopper 	| Log in and out                              	| Keep my account information secure                      	|
+        | 3             	| Shopper 	| View a profile page                         	| Set a default delivery address and view previous orders 	|
+        | 4             	| Shopper 	| Reset my password                           	| Recover my account                                      	|
+
+    - #### SORTING AND SEARCHING
+        | User Story ID 	| As a    	| I want to be able to...                     	| So that I can...                             	|
+        |---------------	|---------	|---------------------------------------------	|----------------------------------------------	|
+        | 1             	| Shopper 	| Search for a show by name or description 	    | Find a specific product I'd like to purchase 	|
+        | 2             	| Shopper	| Add a product           	                    | Add new show to the archive                  	|
+    - #### CONTACT
+      | User Story ID 	| As a              	| I want to be able to... 	| So that I can...                         	|
+      |---------------	|-------------------	|-------------------------	|------------------------------------------	|
+      | 1             	| Shopper 	            | Contact the admin team   	| Ask questions about the e-shop            |
+    
+    - #### ADMIN & STORE MANAGEMENT
+      | User Story ID 	| As a              	| I want to be able to... 	| So that I can...                         	|
+      |---------------	|-------------------	|-------------------------	|------------------------------------------	|
+      | 1             	| Store Owner/Admin 	| Add a show           	    | Add new show to the archive               	|
+      | 2             	| Store Owner/Admin 	| Edit a show             	| Update show details                   	|
+      | 3             	| Store Owner/Admin 	| Delete a show           	| Remove show    	|
+      | 4             	| Store Owner/Admin 	| Delete a show review      | Remove show reviews that might have been entered incorrectly 	|
+
+
+## Features
+There are universal features that are present throughout The Show Library website. These feature are:
+- Responsive on all device sizes - from 320px upwards to larger desktops reaching 1200px and more.
+- Fully-responsive nav bar (including mobile nav bar)
+- Mobile-friendly, adusting automatically at specific breakpoints.
+- The Show Library logo/name is seen at all times whether tucked to the left, central on reduced screen-sizes or at the top of the mobile menu on smaller and mobile devices. This is vital for brand consistency and serves as a simple way of reminding the user of the website's name. 
+- Clear and obvious navbar links to other pages within the website.
+- A Flash box appears at the top of the webpage whenever a user or admin completes a task - by either adding, editing or deleting. 
+
 
 ### Potential Features To Include
 
@@ -23,69 +80,38 @@ Build a show library website.
 ## UX AIMS
 
 - Users should easily find their way around the website.
-- Clear and intuitive navigation menus, categorized film sections, and a user-friendly layout.
+- Clear and intuitive navigation menus, categorized sections, and a user-friendly layout.
 - Ensure the website is accessible and functional across various devices and screen sizes.
 - Present filmss in an engaging manner to capture user attention.
 - Enable users to share their opinions and experiences.
 
-## USERS STORIES
 
-1. **How can I write a review?** I would like to write a review about my favourite film.
-
-2. **I want to discover new films based on genres or categories,** so I can find titles that match my interests.
-
-3. **I want to create a personalized profile,** allowing me to write comments for the films I've seen.
-
-4. **I want a clear and intuitive homepage,** providing an overview of popular and trending movies.
-
-5. **I want the website to be responsive and mobile-friendly,** enabling me to access and navigate it from my smartphone or tablet.
-
-
-## DATA BASE Diagram
-
-**ERDplus Diagram for a database**
-<img src= filmmanager/static/images/Erdplus-diagram.png>
+## DATA BASE
 
 **Database**
-<img src= filmmanager/static/images/inserting_data_ms3.png>
+
+[MONGODB](https://www.mongodb.com/cloud/atlas/register)
+
+MongoDB is a source-available, cross-platform, document-oriented database program. Classified as a NoSQL database product, MongoDB utilizes JSON-like documents with optional schemas.
+
+To create a MongoDB cluster, you need to:
+1. Log in to your MongoDB Atlas account at https://cloud.mongodb.com
+2. Click on the “Create” button.
+3. Choose your cluster type (dedicated, serverless, shared).
+4. Choose your cloud provider and region.
+5. Click on “Create cluster”.
+Alternatively, you can create a MongoDB database cluster at any time from the Create menu by selecting Databases3.
 
 ## TESTING
 
-**Issues with extensions:**
+**HTML AND CSS VALIDATOR**
 
-When I started the project I had an issue with flask,psycopg2 version while I was trying to excute the app with python3 run.py so after some rsearch i found out that i need to downgrade the version .
-Everytime I was typing psql in the terminal to get to my database, I was receiving an error"psql: error: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: FATAL: %0D%0A". I had to search on the internet and I found out that I should reinstall Postgres via apt-get and restart the service: $sudo service postrgresql restart
+[W3C](https://validator.w3.org/)
 
+**LIGHTHOUSE**
 
-**Trying to insert values to a table:**
+<img src= static/images/lighthouse-ms3.jpg>
 
-While testing my tables by adding new values, I encountered an error in my terminal: "sqlalchemy.exc.InvalidRequestError: When initializing mapper mapped class Users->users, expression 'Review' failed to locate a name ('Review'). If this is a class name, consider adding this relationship() to the -class 'filmmanager.models.Users'- class after both dependent classes have been defined." I resolved it by rearranging the tables. The first table should have been Review, followed by Users and Film. Python reads the files from top to bottom, so it does not recognize something exists until it reaches that point in the file.
-
-**Trying to create an User login**
-
-I was unsure how to create a user login or sign-up initially because it was my first time working with Flask. After trying various methods I found on the internet, I sought help from a Tutor Assistant at Code Institute.
-They suggested adding the following code to my app.route:
-
-    if request.method == "POST":
-        email = request.form.get("id_email")
-        password = request.form.get("password")
-
-        user = Users.query.filter_by(id_email=email).first()
-
-        if user and user.check_password(password):
-            #user exists
-            return redirect(url_for('profile'))
-        else:
-            flash("Invalid email or password")
-
-    return render_template("signin.html")
-
-Even though I had the code, I found it challenging to grasp the next steps. Fortunately, I sought support from another student in Slack. They helped me understand that I should import the following:
-"from werkzeug.security import generate_password_hash, check_password_hash ", we used it to protect the password from other users.
-
-**Adding information to a table**
-
-I created an sql file called Database.sql and then accses psql and clect my database by typing \c filmanager then type \i filmmanager/Database.sql
 
 ## DEPLOYMENT
 
@@ -118,71 +144,8 @@ You can fork a GitHub Repository to make a copy of the original repository to vi
 5. Type git clone, and paste the link you copied in step
 6. Press Enter to have the local clone created.
 
-[Web link once deployed](https://filmmanager2-5f027f89de0f.herokuapp.com/)
+[Web link once deployed](https://ms3-re-6da2c447beba.herokuapp.com)
 
-### HEROKU and ELEPHANTSQL
-
-Deploying a Python application on Heroku involves several steps. Here's a general guide:
-If you don't have a Heroku account, sign up for one at Heroku's website.
-
-1. Create an account with ElephantSQL
-2. Authorise ElephantSQL with your selected GitHub account
-3. In the Create new team form:
-   - Add a team name (your own name is fine)
-   - Read and agree to the Terms of Service
-   - Select Yes for GDPR
-   - Provide your email address
-   - Click “Create Team”
-4. Your account is successfully created!
-Create a database
-5. Click “Create New Instance”
-6. Set up your plan (give a name, select the tiny turtle plan and Irish region)
-7. Select data center near you (Ireland)
-8. Then, click Review
-9. Check your details are correct and then click “Create instance”
-10. Return to the ElephantSQL dashboard and click on the database instance name for this project
-11. In the URL section, clicking the copy icon will copy the database URL to your clipboard
-12. Leave this tab open, we will come back here later
-
-Before we can build our application on Heroku, we need to create a few files that Heroku will need to run our application:
-
-- A requirements.txt file which contains a list of the Python dependencies that our project needs in order to run successfully.
-
-- A Procfile which contains the start command to run the project.
-**Process**
-
-1. Generate the requirements.txt file with the following command in the terminal. After you run this command a new file called requirements.txt should appear in your root directory
-
- pip freeze --local > requirements.txt
-
-2. Heroku requires a Procfile containing a command to run your program. Inside the root directory of your project create the new file. It must be called Procfile with a capital P, otherwise Heroku won’t recognise it
-
-3. Inside the file, add the following command:
-
- web: python run.py
-
-4. Open your init file
-
-5. Add an if statement before the line setting the SLQALCHEMY_DATABASE_URI and, in the else, set the value to reference a new variable, DATABASE_URL.
-
- app = Flask(**name**)
- app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
-
- if os.environ.get("DEVELOPMENT") == "True":
-     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
- else:
-     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DATABASE_URL")
-
-6. To ensure that SQLAlchemy can also read our external database, its URL needs to start with “postgresql://”, but we should not change this in the environment variable. Instead, we’ll make an addition to our else statement from the previous step to adjust our DATABASE_URL in case it starts with postgres://:
-
- if os.environ.get("DEVELOPMENT") == "True":
-     app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("DB_URL")
- else:
-     uri = os.environ.get("DATABASE_URL")
-     if uri.startswith("postgres://"):
-         uri = uri.replace("postgres://", "postgresql://", 1)
-     app.config["SQLALCHEMY_DATABASE_URI"] = uri
-7. Save all your files and then add, commit and push your changes to GitHub
 
 **Heroku process**
 
@@ -207,15 +170,6 @@ Now that you have your database and code in your IDE configured, we will add it 
 8. This opens the Python terminal, in the same way as it would if we typed python3 into the terminal within our IDE. Let’s now create the tables with the commands we used before.
 9. Exit the Python terminal, by typing exit() and hitting enter, and close the console. Our Heroku database should now have the tables and columns created from our models.py file.
 
-## HTML AND CSS VALIDATOR
-
-<img src= filmmanager/static/images/html-validator.png>
-
-<img src= filmmanager/static/images/css-validator.png>
-
-### LIGHTHOUSE
-
-<img src= filmmanager/static/images/lighthouse.png>
 
 ## CREDITS
 
@@ -229,18 +183,10 @@ All the code that I have used to create this website was taken from Code Institu
 
 - I wanted to create a shadow background for the text and images: box-shadow and text-shadow.
 
-[codingnepalweb](https://www.codingnepalweb.com/draggable-image-slider-html-css-javascript/)
-
-- I added a javascript code from this website which I used to create a draggable image slider to books.script.
-
-[GOOGLE FONTS](https://fonts.google.com/)
-
-- Fonts used are RocknRoll One.
-
 [stackoverflow](https://stackoverflow.com/)
 
 - is a public platform where i can find and contribute answers to technical challenges.
   
 [codeinstitute](https://codeinstitute.net/) 
 
-- Relational Database Management Systems.
+- Non-Relational Database Management Systems.

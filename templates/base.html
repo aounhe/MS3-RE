@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
-    <title>What To Watch</title>
+    <title>Show Library</title>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <!-- top navbar -->
         <nav class="nav-extended text-shadow teal lighten-1">
             <div class="nav-wrapper">
-                <a href="{{ url_for('get_films') }}" class="brand-logo">What To Watch</a>
+                <a href="{{ url_for('get_films') }}" class="brand-logo">Show Library</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_films') }}">Home</a></li>
@@ -43,7 +43,7 @@
         <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li>
-                <h4 class="center-align light-green-text text-darken 4">What To Watchr</h4>
+                <h4 class="center-align light-green-text text-darken 4">Show Library</h4>
             </li>
             <li><a href="{{ url_for('get_films') }}">Home</a></li>
             {% if session.user %}
